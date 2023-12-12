@@ -1,0 +1,2 @@
+# scalaapartments
+GitHub Pages
