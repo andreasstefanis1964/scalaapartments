@@ -32,13 +32,13 @@
       "nameSelectPreset": "real-estate-agency",
       "presetSourceTheme": "homem5",
       "additionalSetColors": [
+        "#50d4f6",
         "#23c8c4",
         "#dbb97c",
         "#d1b081",
         "#259ecb",
         "#232323",
-        "#003d59",
-        "#c4effe"
+        "#003d59"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -65,7 +65,7 @@
     "mcSmartCart": {
       "currency": "USD"
     },
-    "uniqCompNum": 12,
+    "uniqCompNum": 16,
     "versionPublish": "5.9.6",
     "screenshot": "screenshot.png"
   },
@@ -1071,9 +1071,160 @@
           "_anchor": "article04-b"
         },
         {
+          "_name": "features15",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-section features15 hotelm4_features15\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Cards Count\" name=\"cardsAmount\" min=\"1\" max=\"3\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"1st Card Icons\" name=\"iconsCountFirst\" min=\"0\" max=\"5\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"2nd Card Icons\" name=\"iconsCountSecond\" min=\"0\" max=\"5\" step=\"1\" value=\"3\" condition=\"cardsAmount > 1\">\n\t\t<input type=\"range\" inline title=\"3rd Card Icons\" name=\"iconsCountThird\" min=\"0\" max=\"5\" step=\"1\" value=\"3\" condition=\"cardsAmount > 2\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#878787\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Scale Image On Hover\" name=\"scaleImg\" checked>\n\t\t<input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Info\" name=\"showInfo\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n\t\t<input type=\"checkbox\" title=\"Borders\" name=\"showBorders\" checked>\n\t\t<input type=\"color\" title=\"Borders Color\" name=\"bordersColor\" value=\"#efefef\" condition=\"showBorders\">\n\t\t<input type=\"color\" title=\"Card BG Color\" name=\"cardBg\" value=\"#ffffff\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background9.jpg\" selected parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\">\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=2jqUN6d6ZyM\">\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/hotelm4/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t\n\t</mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<h3 class=\"mbr-section-subtitle main-subtitle mbr-fonts-style mbr-lighter align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".main-subtitle, .underline\">\n\t\t\tHOTEL LUXURY\n\t\t</h3>\n\n\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t<div class=\"line\"></div>\n\t\t</div>\n\n\t\t<h2 class=\"mbr-section-title main-title mbr-fonts-style mbr-white align-center pb-5\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".main-title\">\n\t\t\tOur Rooms\n\t\t</h2>\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card col-md-10\" mbr-class=\"{'col-lg-8': cardsAmount == 1,\n                            'col-lg-6': cardsAmount == 2,\n                            'col-lg-4': cardsAmount == 3}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/04.jpg\" alt=\"Mobirise\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\" mbr-if=\"showCardTitle || showInfo || showText || showButtons\">\n\t\t\t\t\t\t<h2 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title, .card-info\">Double Studio</h2>\n\t\t\t\t\t\t<div class=\"card-info\" mbr-class=\"{'pt-3': showCardTitle}\" mbr-if=\"showInfo\">\n\t\t\t\t\t\t\t<div class=\"info-wrapper\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-user\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">2 GUESTS</p>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-home\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">\n\t\t\t\t\t\t\t\t\t18 sqm</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"mbr-text card-text mbr-fonts-style mbr-lighter\" mbr-class=\"{'pt-3': showCardTitle || showInfo,\n                                    'm-0': !showButtons}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .card-btn\">\n\t\t\t\t\t\t\tOur Double studios offers free Wi-Fi, a fully equipped kitchen, private bathroom, A/C and sea views from its private and shady big veranda.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobiri.se\" class=\"btn btn-lg btn-info-outline\" data-app-placeholder=\"Type Text\">\n\t\t\t\t\t\t\t\tBOOK NOW</a></div>\n\t\t\t\t\t\t<div class=\"card-footer\" mbr-if=\"iconsCountFirst > 0\">\n\t\t\t\t\t\t\t<ul mbr-list mbr-list-grow=\"iconsCountFirst\" class=\"icons-list list-inline align-left\">\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-responsive\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-wifi\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t<div class=\"link\">\n\t\t\t\t\t\t\t\t<div mbr-text class=\"link-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".link-text\">\n\t\t\t\t\t\t\t\t\t<a href=\"https://mobiri.se/\" class=\"text-info\">READ MORE</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-arrow-next\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-md-10\" mbr-class=\"{'col-lg-8': cardsAmount == 1,\n                            'col-lg-6': cardsAmount == 2,\n                            'col-lg-4': cardsAmount == 3}\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/05.jpg\" alt=\"Mobirise\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\" mbr-if=\"showCardTitle || showInfo || showText || showButtons\">\n\t\t\t\t\t\t<h2 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title, .card-info\">Triple Studio</h2>\n\t\t\t\t\t\t<div class=\"card-info\" mbr-class=\"{'pt-3': showCardTitle}\" mbr-if=\"showInfo\">\n\t\t\t\t\t\t\t<div class=\"info-wrapper\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-user\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">3 GUESTS\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-home\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">26 sqm</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"mbr-text card-text mbr-fonts-style mbr-lighter\" mbr-class=\"{'pt-3': showCardTitle || showInfo,\n                                'm-0': !showButtons}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .card-btn\">\n\t\t\t\t\t\t\tThe comfortable Triple studio offers free Wi-Fi, a fully equipped kitchenette, private bathroom, A/C and sea views from its private and shady veranda.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobiri.se\" class=\"btn btn-lg btn-info-outline\" data-app-placeholder=\"Type Text\">\n\t\t\t\t\t\t\t\tBOOK NOW</a></div>\n\t\t\t\t\t\t<div class=\"card-footer\" mbr-if=\"iconsCountSecond > 0\">\n\t\t\t\t\t\t\t<ul mbr-list mbr-list-grow=\"iconsCountSecond\" class=\"icons-list list-inline align-left\">\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-responsive\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-wifi\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-hot-cup\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t<div class=\"link\">\n\t\t\t\t\t\t\t\t<div mbr-text class=\"link-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".link-text\">\n\t\t\t\t\t\t\t\t\t<a href=\"https://mobiri.se/\" class=\"text-info\">READ MORE</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-arrow-next\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-md-10\" mbr-class=\"{'col-lg-8': cardsAmount == 1,\n                            'col-lg-6': cardsAmount == 2,\n                            'col-lg-4': cardsAmount == 3}\" mbr-if=\"cardsAmount > 2\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/03.jpg\" alt=\"Mobirise\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\" mbr-if=\"showCardTitle || showInfo || showText || showButtons\">\n\t\t\t\t\t\t<h2 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title, .card-info\">Family Suite</h2>\n\t\t\t\t\t\t<div class=\"card-info\" mbr-class=\"{'pt-3': showCardTitle}\" mbr-if=\"showInfo\">\n\t\t\t\t\t\t\t<div class=\"info-wrapper\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-user\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">4 GUESTS\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-home\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">46 sqm</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"mbr-text card-text mbr-fonts-style mbr-lighter\" mbr-class=\"{'pt-3': showCardTitle || showInfo,\n                                       'm-0': !showButtons}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text, .card-btn\">\n\t\t\t\t\t\t\tThe Family Suite offers 2 separate bedrooms (one with a double bed, and the other with 2 single beds), private bathroom, free Wi-Fi, a fully equipped kitchenette and sea views from its private and shady veranda.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://mobiri.se\" class=\"btn btn-lg btn-info-outline\" data-app-placeholder=\"Type Text\">\n\t\t\t\t\t\t\t\tBOOK NOW</a></div>\n\t\t\t\t\t\t<div class=\"card-footer\" mbr-if=\"iconsCountThird > 0\">\n\t\t\t\t\t\t\t<ul mbr-list mbr-list-grow=\"iconsCountThird\" class=\"icons-list list-inline align-left\">\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-responsive\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-wifi\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"list-inline-item\">\n\t\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-hot-cup\"></span>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t<div class=\"link\">\n\t\t\t\t\t\t\t\t<div mbr-text class=\"link-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".link-text\">\n\t\t\t\t\t\t\t\t\t<a href=\"https://mobiri.se/\" class=\"text-info\">READ MORE</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-arrow-next\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\t</div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@scaleImg)": {
+              ".card .card-img": {
+                "overflow": "hidden",
+                "img": {
+                  "transition": "all 0.5s"
+                },
+                "&:hover": {
+                  "img": {
+                    "-webkit-transform": "scale3d(1.1, 1.1, 1.1)",
+                    "transform": "scale3d(1.1, 1.1, 1.1)"
+                  }
+                }
+              }
+            },
+            ".underline": {
+              ".line": {
+                "width": "2rem",
+                "height": "1px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".card": {
+              "display": "block",
+              "height": "100%",
+              ".card-wrapper": {
+                "height": "100%",
+                ".card-img": {
+                  "border-radius": "0"
+                }
+              },
+              ".card-box": {
+                "background": "@cardBg",
+                "padding": "2rem",
+                ".card-title": {
+                  "margin": "0"
+                }
+              },
+              ".info-wrapper": {
+                "display": "inline-flex",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                ".mbr-iconfont": {
+                  "padding-right": "0.5rem",
+                  "font-size": "20px"
+                },
+                ".info-text": {
+                  "display": "inline-block",
+                  "padding-right": "1rem",
+                  "margin": "0"
+                }
+              },
+              ".card-btn .btn": {
+                "margin-left": "4px !important",
+                "margin-right": "4px !important"
+              },
+              ".card-footer": {
+                "background": "@cardBg",
+                "margin-top": "1rem",
+                "padding": "0",
+                "padding-top": "1rem",
+                "display": "inline-flex",
+                "width": "100%",
+                "-webkit-justify-content": "space-between",
+                "justify-content": "space-between",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                ".icons-list": {
+                  "margin": "0",
+                  "li": {
+                    "margin-right": "1rem",
+                    ".mbr-iconfont": {
+                      "font-size": "25px",
+                      "color": "#767676"
+                    }
+                  }
+                },
+                ".link": {
+                  ".link-text": {
+                    "display": "inline-block"
+                  },
+                  ".mbr-iconfont": {
+                    "font-size": "12px"
+                  }
+                }
+              }
+            },
+            "& when (@showBorders)": {
+              ".card-box": {
+                "border-style": "solid",
+                "border-color": "@bordersColor",
+                "border-width": "0 1px 1px 1px"
+              },
+              ".card-footer": {
+                "border-top": "1px solid @bordersColor"
+              }
+            },
+            "& when not (@showBorders)": {
+              ".card-footer": {
+                "border": "none"
+              }
+            },
+            ".mbri-arrow-next": {
+              "color": "#709faf"
+            },
+            "@media (max-width: 767px)": {
+              ".card:not(:last-child)": {
+                "padding-bottom": "2rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".card:not(:last-child)": {
+                "padding-bottom": "2rem"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_cid": "tYgu63StgR",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "features15-f"
+        },
+        {
           "_name": "features3",
           "_sourceTheme": "vibem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features3 vibem5\" group=\"Features\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <header>Cards</header>\n        <select title=\"Amount\" name=\"cards\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected>6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n        </select>\n        <input type=\"checkbox\" title=\"Card Icon\" name=\"showIcon\" checked>\n        <input type=\"color\" title=\"Icon Color\" value=\"#000000\" name=\"icon\" condition=\"showIcon\">\n        <input type=\"color\" title=\"Icon BG\" value=\"#ffffff\" name=\"iconBg\" condition=\"showIcon\">\n        <input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Card Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/panorama-4-760x420.jpg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#259ecb\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/vibem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e3ebf3\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                        <b>Our Highlights &amp; Features</b></h2>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v1-local-restaurant\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\"><b>Traditional tavern \"in-house\"</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We can cater for any dietary needs, please tell us in advance!&nbsp;</p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v4-black-cat\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Pets Welcome!</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Bring along your best friend, the lucky creature will get a comfy clean bed and a special doggy breakfast. Restrictions Apply..\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v1-locked-parking\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Secure Parking</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We have parking spaces available direct onsite, free of charge \n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-wifi mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Free WiFi<br></b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Unlimited use of WiFi in all rooms as well as in all facilities.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont fa-coffee fa\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Amazing Breakfast</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Start your day with a full belly - Continental breakfast is served daily in the dining area.. \n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 5\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v2-house-location\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Great Location</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We are located in Kastraki in Naxos, within an area of 12,000 m2 with trees, vine yards and flowers. The beautiful golden, sandy beach is only 800 m away from the hotel.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Positive <br> Impact</b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        Many rap festivals have a social impact component, using the platform to raise awareness and\n                        support social causes.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 7\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Unforgettable <br> Experience</b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        A rap festival can be a memorable experience, providing attendees with an opportunity to see\n                        their favorite artists live.\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features3 vibem5\" group=\"Features\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <header>Cards</header>\n        <select title=\"Amount\" name=\"cards\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected>6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n        </select>\n        <input type=\"checkbox\" title=\"Card Icon\" name=\"showIcon\" checked>\n        <input type=\"color\" title=\"Icon Color\" value=\"#50d4f6\" name=\"icon\" condition=\"showIcon\">\n        <input type=\"color\" title=\"Icon BG\" value=\"#ffffff\" name=\"iconBg\" condition=\"showIcon\">\n        <input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Card Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/panorama-4-760x420.jpg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#259ecb\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/vibem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e3ebf3\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                        <b>Our Highlights &amp; Features</b></h2>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v1-local-restaurant\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\"><b>Traditional tavern \"in-house\"</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We can cater for any dietary needs, please tell us in advance!&nbsp;</p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v4-black-cat\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Pets Welcome!</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Bring along your best friend, the lucky creature will get a comfy clean bed and a special doggy breakfast. Restrictions Apply..\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v1-locked-parking\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Secure Parking</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We have parking spaces available direct onsite, free of charge \n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-wifi mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Free WiFi<br></b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Unlimited use of WiFi in all rooms as well as in all facilities.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont fa-coffee fa\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Amazing Breakfast</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Start your day with a full belly - Continental breakfast is served daily in the dining area.. \n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 5\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont icon54-v2-house-location\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Great Location</b></h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        We are located in Kastraki in Naxos, within an area of 12,000 m2 with trees, vine yards and flowers. The beautiful golden, sandy beach is only 800 m away from the hotel.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Positive <br> Impact</b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        Many rap festivals have a social impact component, using the platform to raise awareness and\n                        support social causes.\n                    </p>\n                </div>\n            </div>\n            <div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cards > 7\">\n                <div class=\"card-wrapper\">\n                    <div class=\"icon-wrap\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-card-title, .icon-wrap\" mbr-if=\"showCardTitle\">\n                        <b>Unforgettable <br> Experience</b>\n                    </h3>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">\n                        A rap festival can be a memorable experience, providing attendees with an opportunity to see\n                        their favorite artists live.\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
@@ -1175,1027 +1326,23 @@
               }
             },
             ".mbr-section-title": {
-              "color": "#000000",
+              "color": "#50d4f6",
               "text-align": "center"
             },
             ".mbr-card-title": {
               "color": "#ffffff"
             },
             ".mbr-text": {
-              "color": "#ffffff",
+              "color": "#50d4f6",
               "text-align": "center"
             },
             ".mbr-card-title, .icon-wrap": {
               "text-align": "center",
-              "color": "#000000"
+              "color": "#50d4f6"
             }
           },
           "_cid": "tYfgvQRcot",
           "_anchor": "features3-8",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".row": {
-              "gap": "20px",
-              "margin": "0 !important"
-            },
-            ".item": {
-              "width": "~\"calc(50% - 10px)\"",
-              "border-radius": "0",
-              "padding": "0",
-              "@media (max-width: 1199px)": {
-                "width": "100%"
-              }
-            },
-            ".item-wrapper": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "padding": "32px",
-              "& when (@showBorder)": {
-                "border": "1px solid @borderColor",
-                "border-radius": "20px"
-              },
-              "& when (@reverseContent)": {
-                "flex-direction": "row-reverse"
-              },
-              "@media (max-width: 1399px)": {
-                "padding": "20px"
-              },
-              "@media (max-width: 1199px)": {
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (max-width: 767px)": {
-                "gap": "40px",
-                "flex-wrap": "wrap",
-                "padding": "12px",
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (min-width: 992px)": {
-                "&:hover": {
-                  ".image-wrapper": {
-                    "img": {
-                      "transform": "scale(1.1)"
-                    }
-                  }
-                }
-              }
-            },
-            ".col-text": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "1"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".date-wrap": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "margin-bottom": "10px"
-            },
-            ".day-text": {
-              "color": "#e3ebf3"
-            },
-            ".month-text": {
-              "color": "#e3ebf3"
-            },
-            ".year-text": {
-              "color": "#e3ebf3"
-            },
-            ".card-title": {
-              "color": "#6c7a88"
-            },
-            ".mbr-text": {
-              "margin-top": "12px",
-              "color": "#e3ebf3"
-            },
-            ".mbr-section-btn": {
-              "margin-top": "16px",
-              "@media (max-width: 767px)": {
-                "margin-top": "12px"
-              }
-            },
-            ".col-img": {
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "2"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".image-wrapper": {
-              "width": "100%",
-              "border-radius": "20px",
-              "overflow": "hidden",
-              "@media (max-width: 1199px)": {
-                "border-radius": "12px"
-              },
-              "img": {
-                "width": "100%",
-                "object-fit": "cover",
-                "transition": "0.4s all",
-                "@media (min-width: 1200px)": {
-                  "aspect-ratio": "(299 / 436)"
-                },
-                "@media (max-width: 1199px)": {
-                  "height": "360px"
-                },
-                "@media (max-width: 767px)": {
-                  "height": "220px"
-                }
-              }
-            }
-          },
-          "_name": "agallery1",
-          "_sourceTheme": "homem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery1 homem5\" group=\"Gallery & Slider\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Day\" name=\"showDay\" checked>\n        <input type=\"checkbox\" title=\"Month\" name=\"showMonth\">\n        <input type=\"checkbox\" title=\"Year\" name=\"showYear\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#2E3237\" condition=\"showBorder\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#2e3237\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a1e21\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-start\">\n            <div class=\"item features-image\">\n                <div class=\"item-wrapper\">\n                    <div class=\"col-text\">\n                        <div class=\"card-wrap\">\n                            <div class=\"date-wrap\" mbr-if=\"showDay || showMonth || showYear\">\n                                <p class=\"day-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showDay\" data-app-selector=\".day-text\">Superior</p>\n                                <div class=\"date-box\">\n                                    <p class=\"month-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showMonth\" data-app-selector=\".month-text\">60</p>\n                                    <p class=\"year-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showYear\" data-app-selector=\".year-text\">qm</p>\n                                </div>\n                            </div>\n                            <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">60 qm,...</h6>\n                            <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                Unser besonders gemütliche Superior Apartment verfügt über eine voll ausgestattete Küche, u.a. mit Kaffeemaschine, Wasserkocher, Bügeleinrichtungen, einem Vorraum zu separat gelegenen Badezimmer mit Dusche, Toilette, Haartrockner. Kostenlosen Pflegeprodukten, dem Essplatz im Wohn/Küchen Bereich, Schlafsofa , und dem Schlafzimmer mit großem Springbett . Flachbild SAT-TV, Radio, Kostenfreies WIFI. Gelegen im 1. Stockwerk mit Fahrstuhl erreichbar. In einer Nebenstrasse nahe zahlreichen Einkaufsmöglichkeiten und Freizeitangeboten. Parkblick, ruhige Hoflage. Schallisoliert. Private Parkplätze gegen Gebühr verfügbar. Hunde sind willkommen. Hand-Desinfektionsmittel, Hygienemaßnahmen.\n                            </p>\n                            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUCHEN SIE ONLINE&nbsp;</a></div>\n                        </div>\n                    </div>\n                    <div class=\"col-img\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/d57a6631.webp\" alt=\"Mobirise Website Builder\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n\n\n            <div class=\"item features-image\">\n                <div class=\"item-wrapper\">\n                    <div class=\"col-text\">\n                        <div class=\"card-wrap\">\n                            <div class=\"date-wrap\" mbr-if=\"showDay || showMonth || showYear\">\n                                <p class=\"day-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showDay\" data-app-selector=\".day-text\">Apartment 2- Schlafzimmer</p>\n                                <div class=\"date-box\">\n                                    <p class=\"month-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showMonth\" data-app-selector=\".month-text\">\n                                        01\n                                    </p>\n                                    <p class=\"year-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showYear\" data-app-selector=\".year-text\">\n                                        2023\n                                    </p>\n                                </div>\n                            </div>\n                            <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">80 qm,&nbsp;</h6>\n                            <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                Unsere 2 größte verfügbaren Apartments befinden sich im 1. Liftstock, und verfügen über eine voll ausgestattete Küche, u.a. mit Kühlschrank, Küchenzeile mit Herdplatte und Bachofen, Geschirrspüler, Kaffeemaschine, Wasserkocher, Bügeleinrichtungen uvm. Vom Vorraum gelangt man zu separaten Wohn-Küchenbereich, mit dem Essplatz für 4 Personen, und dem Wohnzimmer mit Schlafsofa. Flachbild SAT-TV, Radio, kostenfreies WIFI. In weiterer Folge befinden sich noch zwei getrennt begehbare Badezimmer jeweils mit Dusche, Toilette, Haartrockner inklusive kostenlosen Pflegeprodukten, die jeweils den 2 getrennten Schlafzimmern  dazugehören. Doppelbetten mit Steckdosen in Bettennähe.</p>\n                            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUCHEN SIE ONLINE</a></div>\n                        </div>\n                    </div>\n                    <div class=\"col-img\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/d57a6565.webp\" alt=\"Mobirise Website Builder\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n        </div>\n    </div>\n</section>",
-          "_cid": "ty22B6RxG5",
-          "_anchor": "agallery1-6",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".row": {
-              "gap": "20px",
-              "margin": "0 !important"
-            },
-            ".item": {
-              "width": "~\"calc(50% - 10px)\"",
-              "border-radius": "0",
-              "padding": "0",
-              "@media (max-width: 1199px)": {
-                "width": "100%"
-              }
-            },
-            ".item-wrapper": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "padding": "32px",
-              "& when (@showBorder)": {
-                "border": "1px solid @borderColor",
-                "border-radius": "20px"
-              },
-              "& when (@reverseContent)": {
-                "flex-direction": "row-reverse"
-              },
-              "@media (max-width: 1399px)": {
-                "padding": "20px"
-              },
-              "@media (max-width: 1199px)": {
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (max-width: 767px)": {
-                "gap": "40px",
-                "flex-wrap": "wrap",
-                "padding": "12px",
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (min-width: 992px)": {
-                "&:hover": {
-                  ".image-wrapper": {
-                    "img": {
-                      "transform": "scale(1.1)"
-                    }
-                  }
-                }
-              }
-            },
-            ".col-text": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "1"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".date-wrap": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "margin-bottom": "10px"
-            },
-            ".day-text": {
-              "color": "#e3ebf3"
-            },
-            ".month-text": {
-              "color": "#e3ebf3"
-            },
-            ".year-text": {
-              "color": "#e3ebf3"
-            },
-            ".card-title": {
-              "color": "#6c7a88"
-            },
-            ".mbr-text": {
-              "margin-top": "12px",
-              "color": "#e3ebf3"
-            },
-            ".mbr-section-btn": {
-              "margin-top": "16px",
-              "@media (max-width: 767px)": {
-                "margin-top": "12px"
-              }
-            },
-            ".col-img": {
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "2"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".image-wrapper": {
-              "width": "100%",
-              "border-radius": "20px",
-              "overflow": "hidden",
-              "@media (max-width: 1199px)": {
-                "border-radius": "12px"
-              },
-              "img": {
-                "width": "100%",
-                "object-fit": "cover",
-                "transition": "0.4s all",
-                "@media (min-width: 1200px)": {
-                  "aspect-ratio": "(299 / 436)"
-                },
-                "@media (max-width: 1199px)": {
-                  "height": "360px"
-                },
-                "@media (max-width: 767px)": {
-                  "height": "220px"
-                }
-              }
-            }
-          },
-          "_name": "agallery1",
-          "_sourceTheme": "homem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery1 homem5\" group=\"Gallery & Slider\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\" checked>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Day\" name=\"showDay\" checked>\n        <input type=\"checkbox\" title=\"Month\" name=\"showMonth\">\n        <input type=\"checkbox\" title=\"Year\" name=\"showYear\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#2E3237\" condition=\"showBorder\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#259ecb\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a1e21\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-start\">\n            <div class=\"item features-image\">\n                <div class=\"item-wrapper\">\n                    <div class=\"col-text\">\n                        <div class=\"card-wrap\">\n                            <div class=\"date-wrap\" mbr-if=\"showDay || showMonth || showYear\">\n                                <p class=\"day-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showDay\" data-app-selector=\".day-text\">Großes Studio</p>\n                                <div class=\"date-box\">\n                                    <p class=\"month-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showMonth\" data-app-selector=\".month-text\">\n                                        02\n                                    </p>\n                                    <p class=\"year-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" mbr-if=\"showYear\" data-app-selector=\".year-text\">\n                                        2023\n                                    </p>\n                                </div>\n                            </div>\n                            <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">35 qm</h6>\n                            <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                Badezimmer mit Dusche, Toilette, Haartrockner, Wohnzimmer mit Deluxe-Doppelbett, Schlafsofa und vollausgestatteter Küche, u.a. mit Kaffeemaschine, netter Essbereich ,  Flachbild SAT-TV, Radio, WIFI. Das schöne Apartment befindet sich leicht und schnell zugänglich im Parterre, in einer Nebenstrasse Nahe zahlreichen Einkaufsmöglichkeiten und Freizeitangeboten. Hunde sind willkommen. Stadtblick.</p>\n                            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUCHEN SIE ONLINE</a></div>\n                        </div>\n                    </div>\n                    <div class=\"col-img\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/d57a6564.webp\" alt=\"Mobirise Website Builder\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n\n\n            <div class=\"item features-image\">\n                <div class=\"item-wrapper\">\n                    <div class=\"col-text\">\n                        <div class=\"card-wrap\">\n                            <div class=\"date-wrap\" mbr-if=\"showDay || showMonth || showYear\">\n                                <p class=\"day-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showDay\" data-app-selector=\".day-text\">Deluxe Studio</p>\n                                <div class=\"date-box\">\n                                    <p class=\"month-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showMonth\" data-app-selector=\".month-text\">\n                                        01\n                                    </p>\n                                    <p class=\"year-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showYear\" data-app-selector=\".year-text\">\n                                        2023\n                                    </p>\n                                </div>\n                            </div>\n                            <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">40-45 qm, Deluxe Studio Apartment</h6>\n                            <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                 Dieses geräumige De Luxe Studio Apartment verfügt über eine voll ausgestattete Küche, u.a. mit Kaffeemaschine, Wasserkocher, sowie eigenem Badezimmer mit Dusche, Toilette, Haartrockner. Kostenlose Pflegeprodukte. Vorraum. Netter Essplatz im Wohnzimmer, Schlafsofa , Schlafzimmer mit Deluxe-Doppelbett, Flachbild SAT-TV, Radio, Kostenfreies WIFI.  Bügeleisen. Im Stockwerk mit Fahrstuhl erreichbar, in einer Nebenstrasse Nahe zahlreichen Einkaufsmöglichkeiten und Freizeitangeboten. Parkblick, ruhige Hoflage. Schallisoliert. Private Parkplätze gegen Gebühr verfügbar.\n                            </p>\n                            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUCHEN SIE ONLINE</a></div>\n                        </div>\n                    </div>\n                    <div class=\"col-img\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/d57a6415.webp\" alt=\"Mobirise Website Builder\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n        </div>\n    </div>\n</section>",
-          "_cid": "ty22AJXlkA",
-          "_anchor": "agallery1-5",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".row": {
-              "gap": "20px",
-              "margin": "0 !important"
-            },
-            ".item": {
-              "width": "~\"calc(50% - 10px)\"",
-              "border-radius": "0",
-              "padding": "0",
-              "@media (max-width: 1199px)": {
-                "width": "100%"
-              }
-            },
-            ".item-wrapper": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "padding": "32px",
-              "& when (@showBorder)": {
-                "border": "1px solid @borderColor",
-                "border-radius": "20px"
-              },
-              "& when (@reverseContent)": {
-                "flex-direction": "row-reverse"
-              },
-              "@media (max-width: 1399px)": {
-                "padding": "20px"
-              },
-              "@media (max-width: 1199px)": {
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (max-width: 767px)": {
-                "gap": "40px",
-                "flex-wrap": "wrap",
-                "padding": "12px",
-                "& when (@showBorder)": {
-                  "border-radius": "12px"
-                }
-              },
-              "@media (min-width: 992px)": {
-                "&:hover": {
-                  ".image-wrapper": {
-                    "img": {
-                      "transform": "scale(1.1)"
-                    }
-                  }
-                }
-              }
-            },
-            ".col-text": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "1"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".date-wrap": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "gap": "20px",
-              "margin-bottom": "10px"
-            },
-            ".day-text": {
-              "color": "#e3ebf3"
-            },
-            ".month-text": {
-              "color": "#e3ebf3"
-            },
-            ".year-text": {
-              "color": "#e3ebf3"
-            },
-            ".card-title": {
-              "color": "#6c7a88"
-            },
-            ".mbr-text": {
-              "margin-top": "12px",
-              "color": "#e3ebf3"
-            },
-            ".mbr-section-btn": {
-              "margin-top": "16px",
-              "@media (max-width: 767px)": {
-                "margin-top": "12px"
-              }
-            },
-            ".col-img": {
-              "width": "~\"calc(50% - 10px)\"",
-              "@media (max-width: 1199px)": {
-                "width": "100%",
-                "order": "2"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
-              }
-            },
-            ".image-wrapper": {
-              "width": "100%",
-              "border-radius": "20px",
-              "overflow": "hidden",
-              "@media (max-width: 1199px)": {
-                "border-radius": "12px"
-              },
-              "img": {
-                "width": "100%",
-                "object-fit": "cover",
-                "transition": "0.4s all",
-                "@media (min-width: 1200px)": {
-                  "aspect-ratio": "(299 / 436)"
-                },
-                "@media (max-width: 1199px)": {
-                  "height": "360px"
-                },
-                "@media (max-width: 767px)": {
-                  "height": "220px"
-                }
-              }
-            }
-          },
-          "_name": "agallery1",
-          "_sourceTheme": "homem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery1 homem5\" group=\"Gallery &amp; Slider\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Day\" name=\"showDay\" checked=\"\">\n        <input type=\"checkbox\" title=\"Month\" name=\"showMonth\">\n        <input type=\"checkbox\" title=\"Year\" name=\"showYear\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked=\"\">\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#2E3237\" condition=\"showBorder\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#2e3237\" selected=\"\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a1e21\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-start\">\n            <div class=\"item features-image\">\n                <div class=\"item-wrapper\">\n                    <div class=\"col-text\">\n                        <div class=\"card-wrap\">\n                            <div class=\"date-wrap\" mbr-if=\"showDay || showMonth || showYear\">\n                                <p class=\"day-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showDay\" data-app-selector=\".day-text\">Doppelzimmer</p>\n                                <div class=\"date-box\">\n                                    <p class=\"month-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showMonth\" data-app-selector=\".month-text\">60</p>\n                                    <p class=\"year-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showYear\" data-app-selector=\".year-text\">qm</p>\n                                </div>\n                            </div>\n                            <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">20 qm,...</h6>\n                            <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                Das schöne Zweibett Zimmer, zweckmäßig und hübsch eingerichtet. Badezimmer mit Dusche, Toilette, Haartrockner, kostenlosen Pflegeprodukten. Bügeleinrichtung, Kaffeemaschine, Wasserkocher, Kleiderständer uvm. runden die Ausstattung ab. Essbereich für 2 Personen, Flachbild SAT-TV, Radio, kostenfreies WIFI. Das schöne Apartment befindet sich leicht und schnell zugänglich im Parterre. Blick auf Innenhof. \n                            </p>\n                            <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUCHEN SIE ONLINE&nbsp;</a></div>\n                        </div>\n                    </div>\n                    <div class=\"col-img\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/d57a6631.webp\" alt=\"Mobirise Website Builder\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n\n\n            \n\n\n        </div>\n    </div>\n</section>",
-          "_anchor": "agallery1-1",
-          "_isUserblock": true,
-          "_cid": "tYeETl6TUm",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_name": "gallery1",
-          "_sourceTheme": "storem4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,Slider,BootstrapCarouselSwipe,Gallery,VimeoVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <!-- <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked> -->\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showTitle\" checked>\n        <input type=\"color\" title=\"Overlay Color 1\" name=\"overlayColor1\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#d1b081\" condition=\"gradientOverlay\">\n        <input type=\"range\" title=\"Items Overlay Opacity\" name=\"overlayOpacityItem\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" inline>\n        <input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#232323\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/storem4/components/_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#c4effe\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\">Bildgallerie</h2>\n    <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n        <div class=\"line\"></div>\n    </div>\n<!--     <div mbr-class=\"{'container': !fullWidth}\"> -->\n        <div class=\"col-left-gallery\" mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter mbr-gallery-show-text></div>\n   <!--  </div> -->\n</section>",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "overflow": "hidden",
-            "box-sizing": "border-box",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-slider .carousel-control": {
-              "background": "#1b1b1b"
-            },
-            ".mbr-slider .carousel-control-prev": {
-              "left": "0",
-              "margin-left": "2.5rem"
-            },
-            ".mbr-slider .carousel-control-next": {
-              "right": "0",
-              "margin-right": "2.5rem"
-            },
-            ".mbr-slider .modal-body .close": {
-              "background": "#1b1b1b"
-            },
-            ".mbr-gallery-item > div::before": {
-              "content": "''",
-              "position": "absolute",
-              "left": "0",
-              "top": "0",
-              "width": "100%",
-              "height": "100%",
-              "background-color": "@overlayColor1",
-              "opacity": "0",
-              "-webkit-transition": "0.2s opacity ease-in-out",
-              "transition": "0.2s opacity ease-in-out",
-              "& when (@gradientOverlay)": {
-                "background": "linear-gradient(180deg, @overlayColor1, @overlayColor2)"
-              }
-            },
-            ".icon-focus": {
-              "display": "none"
-            },
-            ".mbr-gallery-title": {
-              "transition": "all 0.5s ease",
-              "position": "absolute",
-              "text-align": "right",
-              "display": "none",
-              "width": "100%",
-              "bottom": "0",
-              "right": "0",
-              "padding": "1rem",
-              "color": "#000000",
-              "font-weight": "bold",
-              "background": "transparent",
-              "-webkit-transition": "all 0.5s ease",
-              "-moz-transition": "all 0.5s ease",
-              "-o-transition": "all 0.5s ease",
-              "-ms-transition": "all 0.5s ease"
-            },
-            "ul": {
-              "font-size": "0"
-            },
-            ".mbr-gallery-filter ul li .btn": {
-              "border": "none",
-              "background-color": "transparent",
-              "color": "@tagsColor !important",
-              "padding": "0.5rem 1rem 0.6rem",
-              "border-radius": "0",
-              "margin": "0!important",
-              "transition": "padding, border 0s, transform .2s"
-            },
-            ".mbr-gallery-filter ul li.active .btn": {
-              "padding": "0.5rem 1rem 0.5rem",
-              "border-radius": "0 !important"
-            },
-            ".mbr-gallery-filter ul li.active .btn:after": {
-              "content": "''",
-              "position": "absolute",
-              "bottom": "0",
-              "left": "0",
-              "width": "100%",
-              "height": "1px",
-              "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)"
-            },
-            ".mbr-gallery-filter ul li": {
-              "padding": "0"
-            },
-            ".mbr-gallery-item > div:hover": {
-              ".mbr-gallery-title": {
-                "padding-bottom": "1.5rem",
-                "display": "block"
-              },
-              "&:before": {
-                "opacity": "@overlayOpacityItem !important"
-              }
-            },
-            ".underline": {
-              "padding-top": ".5rem",
-              "padding-bottom": ".5rem",
-              ".line": {
-                "width": "5rem",
-                "height": "3px",
-                "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
-                "display": "inline-block"
-              }
-            },
-            ".btn": {
-              "background": "none",
-              "border-radius": "0 !important",
-              "&:hover": {
-                "background": "transparent !important",
-                "&:before": {
-                  "background": "transparent !important"
-                }
-              },
-              "&:before": {
-                "background-color": "transparent !important"
-              },
-              "&:focus": {
-                "box-shadow": "none"
-              }
-            }
-          },
-          "_cid": "tYf3FK5ECn",
-          "_anchor": "gallery1-6",
-          "_protectedParams": [
-            "text_all",
-            "gallery__filtersTextStyle",
-            "gallery__filtersBtnStyle",
-            "gallery"
-          ],
-          "_global": false,
-          "_once": false,
-          "_params": {
-            "text_all": "Alle",
-            "gallery__filtersTextStyle": "display-7",
-            "gallery__filtersBtnStyle": "btn-primary-outline",
-            "gallery": [
-              {
-                "tags": "HomeSweet Apartments",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6488.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6488.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6565.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6565.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": true
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6564.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6564.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6603.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6603.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6561.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6561.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6507.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6510.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6510.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/flachwinkelaufnahme-des-stephansdoms-in-wien.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/flachwinkelaufnahme-des-stephansdoms-in-wien.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/grabenstrasse-von-wien-mit-einer-pest-saeule-oesterreich-abendansicht.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/grabenstrasse-von-wien-mit-einer-pest-saeule-oesterreich-abendansicht.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/karlskirche-in-wien.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/karlskirche-in-wien.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/nachtansicht-hofburg-wien.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/nachtansicht-hofburg-wien.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/schloss-schoenbrunn-in-wien-oesterreich.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/schloss-schoenbrunn-in-wien-oesterreich.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/stephansdom-in-wien-oesterreich-an-einem-schoenen-herbsttag.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/stephansdom-in-wien-oesterreich-an-einem-schoenen-herbsttag.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/stephansplatz-ein-beruehmter-platz-in-wien-oesterreich-ohne-menschen.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/stephansplatz-ein-beruehmter-platz-in-wien-oesterreich-ohne-menschen.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Wien",
-                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/trainer-in-der-hofburg.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/trainer-in-der-hofburg.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              }
-            ]
-          }
-        },
-        {
-          "_name": "list02",
-          "_sourceTheme": "planm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"list02 planm5\" group=\"List\" plugins=\"mbr-switch-arrow, mobirise-icons\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <header>Cards</header>\n        <select title=\"Amount\" name=\"cardAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" title=\"Icon Color\" value=\"#000000\" name=\"icon\" selected>\n        <input type=\"color\" title=\"Icon BG\" value=\"#d1b081\" name=\"iconBg\" selected>\n        <input type=\"color\" title=\"Active Bg\" value=\"#d1b081\" name=\"active\" selected>\n        <input type=\"color\" title=\"Border Card\" value=\"#4a5357\" name=\"border\" selected>\n        <input type=\"color\" title=\"Border Container\" value=\"#fdfcfc\" name=\"container\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/planm5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/planm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col-lg-10 item\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Haben Sie Fragen zu Ihrer Wien-(An)reise?</h2>\n                </div>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Wie komme ich vom Flughafen Wien-Schwechat in die Stadt insb. zu Ihren Apartments?</h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">City-Airport Train CAT: fährt zwischen Flughafen und Wien-Mitte/Landstraße. Fahrtzeit 16 Minuten. Einzelfahrt Erwachsene: € 12,-, günstiger bei Online-Buchung oder mit der  Vienna City Card<br><br>Busse der Vienna Airport Lines: fahren in die Innenstadt (Fahrtzeit 22 Minuten), über den Hauptbahnhof zum Westbahnhof (Fahrtzeit 40 Minuten) sowie via Vienna International Centre zum Donauzentrum (Fahrtzeit 39 Minuten). Einzelfahrt: € 8,-, günstiger mit der Vienna City Card<br><br>Schnellbahn S7: fährt vom Flughafen über Wien-Mitte/Landstrasse bis Floridsdorf. Fahrtzeit bis Wien Mitte: ca. 25 Minuten, Preis: € 4,20; benötigt werden zwei Fahrscheine: € 2,40 (im Wiener Stadtgebiet) und € 1,80 (für die Fahrt vom Flughafen bis zur Stadtgrenze); Reisende mit der  Vienna City Card benötigen nur einen zusätzlichen Einzelfahrschein zu € 1,80 für die Fahrt vom Flughafen bis zur Stadtgrenze Wien.<br><br>ÖBB Railjet: die Railjets der Österreichischen Bundesbahnen (ÖBB) fahren zwei Mal stündlich nonstop nach Wien Hauptbahnhof (15 Minuten) und Bahnhof Wien Meidling (ca. 30 Minuten). Preis: € 4,20; benötigt werden zwei Fahrscheine: € 2,40 (im Wiener Stadtgebiet) und € 1,80 (für die Fahrt vom Flughafen bis zur Stadtgrenze Wien); Reisende mit der roten  Vienna City Card benötigen nur einen zusätzlichen Einzelfahrschein zu € 1,80 für Fahrt vom Flughafen bis zur Stadtgrenze Wien.<br><br>Mit der Vienna City Card TRANSFER und der Vienna City Card TRANSFER+TOUR ist die Fahrt vom/zum Flughafen mit dem City Airport Train (CAT), den Bussen der Vienna Airport Lines, der Schnellbahn S7 und dem ÖBB-Railjet inkludiert.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 1\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Welche Fahrscheine für Wiens öffentliche Linien gibt es für Kinder, Schüler und Senioren?</h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">Halbpreisfahrschein für Kinder von 6 bis inkl. 14 Jahren: € 1,20 im Vorverkauf und € 1,40 in der Straßenbahn. Gültig für eine Fahrt, umsteigen gestattet, die Fahrt darf aber nicht unterbrochen werden. Dieses Ticket gilt auch für die Mitnahme von Hunden in Wiens öffentlichen Linien.<br><br>2-Fahrten Seniorenfahrschein: € 3,00 für Frauen und Männer ab 63 Jahre. Dieser Fahrschein gilt für 2 Fahrten an beliebigen Tagen.<br><br>Kinder bis 6 Jahre fahren immer kostenlos mit den Wiener Öffis.<br>An Sonn- und Feiertagen sowie in den Wiener Schulferien fahren alle Kinder bis 15 Jahre mit Wiens öffentlichen Verkehrsmitteln gratis. Diese Regelung gilt auch für Schüler einer österreichischen Schule bis zum Alter von 24 Jahren - (Schüler-) Ausweispflicht!<br><br>Es gibt keine Mehrtages-Tickets für Kinder oder Senioren.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 2\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Wann haben in Wien die Geschäfte geöffnet?</h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                    Die Geschäfte sind zumeist Mo-Fr 9-18.30 Uhr, Sa bis 17 oder 18 Uhr, einige Einkaufszentren von Mo-Fr bis 20 oder 21 Uhr geöffnet. Einkaufsmöglichkeiten an Sonn-und Feiertagen gibt es in den großen Bahnhöfen, am Flughafen und in den Museum-Shops. Mehr Details zu den Öffnungszeiten in Wien.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 3\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">Welche Stadtrundfahrten und -rundgänge werden in Wien angeboten?&nbsp;</h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">Busrundfahrten, begleitet von fachkundigen Guides, durch die Innenstadt, zum Schloß Schönbrunn, zum Heurigen nach Grinzing und viele andere Touren bieten die Unternehmen Cityrama, Redbus Citytours und Vienna Sightseeing Tours an.<br><br>Hop On  Hop Off Busse fahren entlang dreier Routen durch die Stadt. Steigen Sie ein und aus wo Sie wollen. Informationen zu den Sehenswürdigkeiten entlang der Strecke gibt's in 12 Sprachen.<br><br>Geführte Spaziergänge durch die Stadt, die oft Blicke hinter die Fassaden werfen, werden zu unterschiedlichsten Themen und zu vielen Terminen angeboten. Die Spaziergänge finden in der Regel ab drei Teilnehmern statt, kommen Sie einfach zur angegebenen Uhrzeit zum jeweiligen Treffpunkt. Für Einzelreisende sind Anmeldungen im Voraus nicht notwendig. Gruppen können jede Führung individuell direkt beim Guide buchen.<br><br>Die Vienna Ring Tram ist die einzige Straßenbahnlinie Wiens, die eine ganze Runde über die Ringstraße fährt. Zudem erhalten Sie audiovisuelle Informationen zu den Prachtbauten entlang des Boulevards.<br><br>Schiffsrundfahrten auf der Donau und am Donaukanal bietet die DDSG-BlueDanube an. An Bord gehen können Sie bei der Schiffsstation Wien City am Schwedenplatz, beim Yachthafen Marina Wien und bei der Anlegestelle bei der Reichsbrücke.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 4\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    Can I access my accounts online?\n                                </h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                    Yes, we offer an online portal where you can access your accounts, view\n                                    transaction history, monitor investments, and more. Our online platform is\n                                    designed for convenience and ease of use.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card\" mbr-if=\"cardAmount > 5\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                            <a role=\"button\" class=\"panel-title collapsed\" data-toggle=\"collapse\" data-bs-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                <h4 class=\"panel-title-edit mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".panel-title-edit\">\n                                    How do you customize financial plans for clients?\n                                </h4>\n                                <span class=\"sign mbr-iconfont mobi-mbri-down mobi-mbri\"></span>\n                            </a>\n                        </div>\n                        <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\" data-bs-parent=\"#accordion\">\n                            <div class=\"panel-body\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                    We believe in personalized financial planning. Our advisors will work closely\n                                    with you to understand your financial goals, risk tolerance, and time horizon.\n                                    Based on this information, we'll create a tailored financial plan to help you\n                                    achieve your objectives.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            "& when (@fullWidth)": {
-              ".container-fluid": {
-                "padding": "0",
-                "@media (max-width: 992px)": {
-                  "padding": "0"
-                }
-              }
-            },
-            ".container": {
-              "@media (max-width: 992px)": {
-                "padding": "0 16px"
-              }
-            },
-            ".row": {
-              "justify-content": "center",
-              "margin": "0 20px",
-              "@media (max-width: 992px)": {
-                "margin": "0 10px"
-              },
-              ".item": {
-                "padding": "0"
-              }
-            },
-            ".title-wrapper": {
-              "margin-bottom": "40px",
-              "@media (max-width: 992px)": {
-                "margin-bottom": "20px"
-              },
-              ".mbr-section-title": {
-                "margin-bottom": "0"
-              }
-            },
-            ".panel-group": {
-              "border": "1px solid @container",
-              "border-radius": "20px",
-              "overflow": "hidden",
-              ".card": {
-                "border-top": "1px solid @border",
-                "border-radius": "0 !important",
-                "&:first-child": {
-                  "border-top": "none"
-                },
-                "&:last-child": {
-                  "border-bottom": "none"
-                },
-                ".card-header": {
-                  "padding": "0",
-                  "border": "none",
-                  "background-color": "transparent",
-                  ".panel-title": {
-                    "padding": "30px",
-                    "display": "flex",
-                    "align-items": "center",
-                    "justify-content": "space-between",
-                    "transition": "all 0.3s ease-in-out",
-                    "@media (max-width: 992px)": {
-                      "padding": "20px 10px"
-                    },
-                    "&:not(.collapsed)": {
-                      "background-color": "@active",
-                      ".mbr-iconfont": {
-                        "transform": "rotate(-180deg)",
-                        "color": "@iconBg",
-                        "background-color": "@icon"
-                      },
-                      ".panel-title-edit": {
-                        "color": "@icon"
-                      }
-                    },
-                    ".panel-title-edit": {
-                      "margin-bottom": "0",
-                      "transition": "all 0.3s ease-in-out"
-                    },
-                    ".mbr-iconfont": {
-                      "display": "flex",
-                      "align-items": "center",
-                      "justify-content": "center",
-                      "width": "60px",
-                      "min-width": "60px",
-                      "height": "60px",
-                      "border-radius": "50%",
-                      "font-size": "30px",
-                      "color": "@icon",
-                      "background-color": "@iconBg",
-                      "margin-left": "10px",
-                      "transition": "all 0.3s ease-in-out"
-                    }
-                  }
-                },
-                ".panel-collapse": {
-                  ".panel-body": {
-                    "padding": "30px",
-                    "@media (max-width: 992px)": {
-                      "padding": "20px 10px"
-                    },
-                    ".panel-text": {
-                      "margin-bottom": "0"
-                    }
-                  }
-                }
-              }
-            },
-            ".image-wrapper": {
-              "height": "100%",
-              "img": {
-                "height": "100%",
-                "object-fit": "cover",
-                "@media (max-width: 992px)": {
-                  "height": "350px"
-                }
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#fdfcfc"
-            },
-            ".panel-title-edit": {
-              "color": "#fdfcfc"
-            },
-            ".panel-text": {
-              "color": "#fdfcfc"
-            }
-          },
-          "_cid": "tYfQmSHqN3",
-          "_anchor": "list02-a",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -2352,31 +1499,6 @@
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            ".mbr-text": {
-              "color": "#e3ebf3"
-            }
-          },
-          "_name": "afooter2",
-          "_sourceTheme": "homem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer2 homem5\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#1a1e21\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a1e21\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2022-2024 - All Rights Reserved - ELA TOURISM TECHNOLOGIES LTD</p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ty25lXMXpm",
-          "_anchor": "afooter2-a",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
           "_params": {}
         }
       ]
