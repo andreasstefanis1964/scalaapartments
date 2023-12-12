@@ -1492,7 +1492,7 @@ strong {
 .cid-tYgll1mvJE {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-image: url("../../../assets/images/scala-exoteriki-panoramac-2-760x420.jpg");
+  background-color: #259ecb;
 }
 @media (max-width: 992px) and (max-width: 992px) {
   .cid-tYgll1mvJE .container {
@@ -1517,7 +1517,7 @@ strong {
   margin-bottom: 0;
 }
 .cid-tYgll1mvJE .text-wrapper {
-  border-top: 1px solid #72716b;
+  border-top: 1px solid #d1b081;
   display: flex;
   justify-content: space-between;
   padding: 32px;
@@ -1671,7 +1671,7 @@ strong {
 }
 .cid-tYfgvQRcot {
   overflow: hidden;
-  background-image: url("../../../assets/images/panorama-4-760x420.jpg");
+  background-color: #3f6377;
 }
 .cid-tYfgvQRcot .mbr-fallback-image.disabled {
   display: none;
