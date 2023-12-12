@@ -947,41 +947,6 @@
           }
         },
         {
-          "_name": "content1",
-          "_sourceTheme": "hotelm4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-section content1 hotelm4_content1\" group=\"Content\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"100\">\n\t\t<input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"32\" condition=\"showLines\">\n\t\t<hr>\n\t\t<input type=\"checkbox\" title=\"Show Lines\" name=\"showLines\" checked>\n\t\t<input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#259ecb\" condition=\"showLines\">\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"inner-container\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\">\n\t\t\t\t\tDie 11 komfortablen Home Sweet Apartments empfangen Sie in Wien, nur 10 Gehminuten vom Schloss Belvedere entfernt. Die Apartments im Home Sweet zur Selbstverpflegung verfügen jeweils über einen Flachbild-TV, einen Wohnbereich sowie ein Badezimmer mit einer Dusche, einem Haartrockner und kostenlosen Pflegeprodukten. Auch ein DVD- und ein CD-Player sind vorhanden.\n\t\t\t\t</p>\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
-            ".line": {
-              "background-color": "@lineColor",
-              "color": "@lineColor",
-              "align": "center",
-              "height": "2px",
-              "margin": "0 auto"
-            },
-            ".mbr-text": {
-              "margin": "0",
-              "& when (@showLines)": {
-                "padding": "2rem 0"
-              }
-            },
-            "@media (max-width: 768px)": {
-              ".inner-container": {
-                "width": "100% !important",
-                "padding": "0 15px"
-              }
-            }
-          },
-          "_cid": "tYfiKHVoDN",
-          "_anchor": "content1-9",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "_name": "article04",
           "_sourceTheme": "fabm5",
           "_customHTML": "<section data-bs-version=\"5.1\" class=\"article04 fabm5\" group=\"Article\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Description\" name=\"showDesc\" checked>\n        <input type=\"checkbox\" title=\"Text 1\" name=\"showText_1\" checked>\n        <input type=\"checkbox\" title=\"Text 2\" name=\"showText_2\" checked>\n        <input type=\"color\" title=\"Border Color\" value=\"#d1b081\" name=\"border\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax required>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/scala_exoteriki_panoramac-2-760x420.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#259ecb\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\" mbr-if=\"showTitle || showDesc\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title, .mbr-section-btn\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                        <b>About Scala Apartments</b></h2>\n                    <p class=\"mbr-desc mbr-fonts-style\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\" mbr-if=\"showDesc\">located in Kastraki on the island Naxos in Cyclades</p>\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"text-wrapper\">\n                    <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\" mbr-if=\"showText_1\">The name \"Scala\" comes from the Venetians, who dominated the island centuries ago. They named the place \"Scala\" because from here began the \"climbing\" for anyone wanting to visit the villages of the island. So in our desire to maintain the place's name we named it \"Scala\". For the past 25 years we give all our love and passion to become a small oasis of holiday in the area of ​​Kastraki.\n                    </p>\n                    <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\" mbr-if=\"showText_2\">It consists of ten separate studios-apartments in four different buildings, all designed by following the Cycladic architecture.<br>Our complex is located in field of 12.000m2, full of trees, vines and flowers.<br>All the buildings are surrounded by small stone paths and  gardens with a variety of local flowers.&nbsp;</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
@@ -1485,91 +1450,6 @@
           },
           "_cid": "tYgRqvDvrf",
           "_anchor": "aslider1-j",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_name": "gallery01",
-          "_sourceTheme": "foodm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery01 foodm5\" group=\"Gallery & Slider\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" range\"=\"\" color\"=\"\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/foodm5/components/_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#dedede\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/foodm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#dedede\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"item features-image col-12 col-lg-4\">\n                <div class=\"item-wrapper\">\n                    <a href=\"#\">\n                        <div class=\"item-img\">\n                            <img src=\"@PROJECT_PATH@/assets/images/panorama-4.webp\" alt=\"Mobirise Website Builder\" title>\n                        </div>\n                    </a>\n                </div>\n            </div>\n            <div class=\"item features-image col-12 col-lg-4\">\n                <div class=\"item-wrapper\">\n                    <a href=\"#\">\n                        <div class=\"item-img\">\n                            <img src=\"@PROJECT_PATH@/assets/images/panorama-5.webp\" alt=\"Mobirise Website Builder\" title>\n                        </div>\n                    </a>\n                </div>\n            </div>\n            <div class=\"item features-image col-12 col-lg-4\">\n                <div class=\"item-wrapper\">\n                    <a href=\"#\">\n                        <div class=\"item-img\">\n                            <img src=\"@PROJECT_PATH@/assets/images/-stg7194.webp\" alt=\"Mobirise Website Builder\" title>\n                        </div>\n                    </a>\n                </div>\n            </div>\n            \n            \n            \n        </div>\n    </div>\n</section>",
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "overflow": "hidden",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            "& when (@fullWidth)": {
-              ".container-fluid": {
-                "padding": "0",
-                "border-top": "1px solid @border",
-                "border-bottom": "1px solid @border",
-                "@media (max-width: 992px)": {
-                  "padding": "0"
-                }
-              }
-            },
-            ".container": {
-              "border-top": "1px solid @border",
-              "border-bottom": "1px solid @border",
-              "@media (max-width: 992px)": {
-                "padding": "0 28px"
-              }
-            },
-            ".row": {
-              "margin": "-1px 0 0 0",
-              "justify-content": "center",
-              "padding": "20px",
-              "@media (max-width: 992px)": {
-                "padding": "20px 8px"
-              }
-            },
-            ".item": {
-              "padding": "20px",
-              ".item-wrapper": {
-                "a": {
-                  "display": "block",
-                  "&:hover": {
-                    ".item-img img": {
-                      "transform": "scale(1.06)"
-                    }
-                  },
-                  ".item-img": {
-                    "overflow": "hidden",
-                    "img": {
-                      "height": "300px",
-                      "object-fit": "cover",
-                      "transition": "all 0.3s ease-in-out"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "_cid": "tYgWATKzdn",
-          "_anchor": "gallery01-k",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
