@@ -65,7 +65,7 @@
     "mcSmartCart": {
       "currency": "USD"
     },
-    "uniqCompNum": 21,
+    "uniqCompNum": 22,
     "versionPublish": "5.9.6",
     "screenshot": "screenshot.png"
   },
@@ -1454,6 +1454,162 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_name": "gallery2",
+          "_sourceTheme": "careerm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery2 careerm5\" group=\"Gallery & Slider\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Link\" name=\"showLink\" checked>\n        <input type=\"color\" title=\"Active Link\" value=\"#FF6839\" name=\"active\" selected>\n        <input type=\"range\" inline title=\"Images Amount\" name=\"image\" min=\"1\" max=\"6\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Icon\" name=\"showIcon\" checked>\n        <input type=\"color\" title=\"Active Card\" value=\"#ffffff\" name=\"card\" selected>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/careerm5/components/_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/careerm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\" mbr-if=\"showTitle || showLink\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Discover Naxos island</h2>\n                    <a class=\"link-wrapper\" href=\"#\">\n                        <p class=\"mbr-link mbr-fonts-style\" data-app-selector=\".mbr-link\" mbr-theme-style=\"display-4\" mbr-if=\"showLink\">Naxos is the largest island in the Cyclades island group in the Aegean sea. It was the centre of archaic Cycladic culture.</p>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 card\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-1920x1258.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12 col-lg-2 card\" mbr-if=\"image > 1\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-545x363.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12 col-lg-2 card\" mbr-if=\"image > 2\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-513x385.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12 col-lg-2 card\" mbr-if=\"image > 3\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-545x362.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12 col-lg-2 card\" mbr-if=\"image > 4\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-513x342.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12 col-lg-2 card\" mbr-if=\"image > 5\">\n                <a href=\"#\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-1-545x363.jpg\" alt=\"Mobirise\">\n                        <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\" mbr-if=\"showIcon\"></span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"text-wrapper\" mbr-if=\"showText\">\n                    <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">\n                        Naxos is the also known for its rich history, stunning landscapes, and diverse range of activities.</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "& when (@fullWidth)": {
+              ".container-fluid": {
+                "padding": "0 60px",
+                "@media (max-width: 992px)": {
+                  "padding": "0 30px"
+                },
+                ".row": {
+                  "margin": "0",
+                  "padding": "0",
+                  "@media (max-width: 992px)": {
+                    "margin": "0"
+                  }
+                }
+              }
+            },
+            ".container": {
+              "@media (max-width: 992px)": {
+                "padding": "0 30px"
+              }
+            },
+            ".row": {
+              "justify-content": "center"
+            },
+            ".title-wrapper": {
+              "margin-bottom": "55px",
+              ".mbr-section-title": {
+                "margin-bottom": "20px"
+              },
+              ".link-wrapper": {
+                "&:hover": {
+                  ".mbr-link": {
+                    "color": "@active"
+                  }
+                },
+                ".mbr-link": {
+                  "margin-bottom": "0",
+                  "transition": "all 0.3s ease-out"
+                }
+              }
+            },
+            ".card": {
+              "padding": "0 8px",
+              "&:nth-child(2n)": {
+                "padding": "80px 8px 0",
+                "@media (max-width: 992px)": {
+                  "padding": "0 12px"
+                }
+              },
+              "@media (max-width: 992px)": {
+                "padding": "0 12px"
+              },
+              "a": {
+                "display": "block",
+                "&:hover": {
+                  ".image-wrapper": {
+                    ".mbr-iconfont": {
+                      "opacity": "1"
+                    },
+                    "&::before": {
+                      "opacity": ".5"
+                    }
+                  }
+                },
+                ".image-wrapper": {
+                  "position": "relative",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "center",
+                  "overflow": "hidden",
+                  "img": {
+                    "height": "215px",
+                    "object-fit": "cover",
+                    "border-radius": "10px",
+                    "@media (max-width: 992px)": {
+                      "height": "250px",
+                      "margin-bottom": "22px"
+                    }
+                  },
+                  ".mbr-iconfont": {
+                    "position": "absolute",
+                    "font-size": "22px",
+                    "color": "@card",
+                    "opacity": "0",
+                    "transition": "all 0.3s ease-out"
+                  },
+                  "&:before": {
+                    "position": "absolute",
+                    "content": "''",
+                    "width": "100%",
+                    "height": "100%",
+                    "display": "block",
+                    "background-color": "@card",
+                    "opacity": "0",
+                    "border-radius": "10px",
+                    "transition": "all 0.3s ease-out",
+                    "pointer-events": "none"
+                  }
+                }
+              }
+            },
+            ".text-wrapper": {
+              "margin-top": "44px",
+              ".mbr-text": {
+                "margin": "0"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#000000",
+              "text-align": "center"
+            },
+            ".mbr-link": {
+              "color": "#4b5158",
+              "text-align": "center"
+            },
+            ".mbr-text": {
+              "color": "#000000",
+              "text-align": "center"
+            }
+          },
+          "_cid": "tYkIYa8LJz",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "gallery2-l"
         },
         {
           "_name": "info3",
